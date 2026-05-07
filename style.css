@@ -31,7 +31,6 @@ body {
   padding: 24px;
 }
 
-/* subtle grain */
 body::before {
   content: "";
   position: fixed;
@@ -69,7 +68,6 @@ body::before {
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
 }
 
-/* faux road/car red block at bottom */
 .card::after {
   content: "";
   position: absolute;
@@ -90,7 +88,6 @@ body::before {
   z-index: 0;
 }
 
-/* dark hill silhouettes */
 .card::before {
   content: "";
   position: absolute;

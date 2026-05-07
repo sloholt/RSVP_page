@@ -55,7 +55,6 @@ guestSelect.addEventListener("change", () => {
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  // 🔥 SHOW SUBMITTING
   formMessage.textContent = "Submitting...";
 
   const formData = new FormData(form);
@@ -78,17 +77,14 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify(data)
     });
 
-    // 🔥 REMOVE "Submitting..."
     formMessage.textContent = "";
 
-    // 🔥 FADE OUT CARD
     formCard.style.transition = "opacity 0.4s ease";
     formCard.style.opacity = "0";
 
     setTimeout(() => {
       formCard.style.display = "none";
 
-      // 🔥 SHOW SUCCESS SCREEN
       successScreen.style.display = "flex";
       successScreen.classList.remove("hidden");
     }, 400);
