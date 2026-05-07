@@ -2,7 +2,10 @@ const form = document.getElementById("rsvpForm");
 const formCard = document.getElementById("formCard");
 
 const formMessage = document.getElementById("formMessage");
+const successScreen = document.getElementById("successScreen");
 const successMessage = document.getElementById("successMessage");
+const detailsToggle = document.getElementById("detailsToggle");
+const eventDetails = document.getElementById("eventDetails");
 
 const attendingSelect = document.getElementById("attendingSelect");
 const guestSection = document.getElementById("guestSection");
@@ -14,7 +17,7 @@ const declineMessage = document.getElementById("declineMessage");
 const guestNameInput = guestNameField.querySelector("input");
 const questionsInput = questionsSection.querySelector("textarea");
 
-const WEB_APP_URL = "YOUR_URL_HERE";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw6UQgx6U_3A4Fd1NWFVkMYNbN0_mJPDl5JtJb4TL4pUbkzI2jXd-5U6L6ppaH8fEq_/exec";
 
 /* ATTENDING LOGIC */
 attendingSelect.addEventListener("change", () => {
@@ -85,9 +88,9 @@ form.addEventListener("submit", async (e) => {
     setTimeout(() => {
       formCard.style.display = "none";
 
-      // 🔥 SHOW FINAL MESSAGE
-      successMessage.textContent = "Yeehaw 🤠 Your RSVP has been submitted!";
-      successMessage.classList.add("center-message");
+      // 🔥 SHOW SUCCESS SCREEN
+      successScreen.style.display = "flex";
+      successScreen.classList.remove("hidden");
     }, 400);
 
     form.reset();
@@ -95,4 +98,10 @@ form.addEventListener("submit", async (e) => {
   } catch (error) {
     formMessage.textContent = "Something went wrong. Try again.";
   }
+});
+/* DETAILS TOGGLE */
+detailsToggle.addEventListener("click", () => {
+  const isHidden = eventDetails.classList.contains("hidden");
+  eventDetails.classList.toggle("hidden", !isHidden);
+  detailsToggle.textContent = isHidden ? "Hide Event Details" : "🤠 View Event Details";
 });

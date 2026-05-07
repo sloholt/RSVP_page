@@ -18,7 +18,7 @@
       <section class="card" id="formCard">
         <p class="script">You’re Invited to</p>
         <h1>HOLTBYFEST</h1>
-        <p class="tagline">She's Choosin’ Texas!</p>
+        <p class="tagline">2026</p>
 
         <form id="rsvpForm">
           <label>
@@ -40,7 +40,7 @@
           </p>
 
           <label id="guestSection" class="hidden">
-            Bringing a guest?
+            Bringing a guest(s)?
             <select name="guest" id="guestSelect">
               <option value="">Select one</option>
               <option value="Yes">Yes</option>
@@ -49,7 +49,7 @@
           </label>
 
           <label id="guestNameField" class="hidden">
-            Guest Name
+            Guest Name(s)
             <input type="text" name="guestName" />
           </label>
 
@@ -62,7 +62,50 @@
           <p id="formMessage" class="form-message"></p>
         </form>
       </section>
-      <p id="successMessage"></p>
+      <div id="successScreen" class="hidden" style="display: none">
+        <p id="successMessage" class="center-message">
+          Yeehaw 🤠 Your RSVP has been submitted!
+        </p>
+        <button id="detailsToggle" class="details-btn">
+          View Event Details
+        </button>
+
+        <section id="eventDetails" class="event-details hidden">
+          <h2>Event Details</h2>
+          <div class="details-grid">
+            <div class="detail-item">
+              <span class="detail-icon">📅</span>
+              <div>
+                <strong>Date</strong>
+                <p>Saturday, June 27th, 2026</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">⏰</span>
+              <div>
+                <strong>Time</strong>
+                <p>4:00 – 9:00 PM</p>
+                <small style="display:block; font-size:8px; color:#7a5c50; font-style:italic; margin-top:3px;">
+                Bus to Ranchmans will be leaving at 9:00 PM
+                </small>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">📍</span>
+              <div>
+                <strong>Location</strong>
+                <p>243 Aspen Ridge Pl Sw<br />Calgary, AB T3H 0J7</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">🍖</span>
+              <div>
+                <strong>Food &amp; Drinks</strong>
+                <p>Texas BBQ provided</p>
+                <p>byob</p>
+              </div>
+        </section>
+      </div>
     </main>
 
     <script src="script.js"></script>

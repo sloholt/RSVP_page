@@ -248,6 +248,110 @@ button:active {
   text-shadow: 2px 2px 0 var(--dark-red);
 }
 
+.form-message {
+  margin-top: 14px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  color: #a24a3f;
+}
+
+/* final centered message */
+.center-message {
+  font-size: 42px;
+  font-weight: 800;
+  color: #fff8ee;
+  text-shadow: 3px 3px 0 #6f1f1a;
+  text-align: center;
+  margin: 0 0 24px;
+  z-index: 9999;
+}
+
+#successScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.details-btn {
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  padding: 14px 32px;
+  font-size: 22px;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 0 var(--dark-red);
+  transition: transform 0.1s;
+}
+
+.details-btn:hover {
+  transform: translateY(-2px);
+}
+.details-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 var(--dark-red);
+}
+
+.event-details {
+  background: rgba(255, 248, 238, 0.92);
+  border: 3px solid rgba(159, 47, 37, 0.9);
+  border-radius: 22px;
+  padding: 32px 36px;
+  color: var(--black);
+  max-width: 640px;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.event-details h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 48px;
+  color: var(--red);
+  text-align: center;
+  margin: 0 0 24px;
+  text-shadow: 1px 1px 0 rgba(111, 31, 26, 0.4);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.detail-icon {
+  font-size: 28px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.detail-item strong {
+  display: block;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--red);
+  margin-bottom: 2px;
+}
+
+.detail-item p {
+  margin: 0;
+  font-size: 18px;
+  color: #332822;
+  line-height: 1.4;
+}
+
 @media (max-width: 600px) {
   body {
     padding: 12px;
@@ -288,25 +392,12 @@ button:active {
   textarea {
     font-size: 19px;
   }
-  .form-message {
-    margin-top: 14px;
-    font-size: 22px;
-    font-weight: 700;
-    text-align: center;
-    color: #a24a3f;
+
+  .details-grid {
+    grid-template-columns: 1fr;
   }
 
-  /* final centered message */
   .center-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 42px;
-    font-weight: 800;
-    color: #fff8ee;
-    text-shadow: 3px 3px 0 #6f1f1a;
-    text-align: center;
-    z-index: 9999;
+    font-size: 32px;
   }
 }
